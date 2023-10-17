@@ -1,0 +1,67 @@
+@media print {
+	img {
+		max-width: 100%;
+	}
+	body {
+		max-width:100%;
+	}
+	.pagebreak {
+		page-break-after: always;
+		break-after: always;
+	}
+}
+@page {
+	margin-left: 4cm;
+	margin-right: 4cm;
+	margin-top: 1cm;
+	margin-bottom: 1cm;
+}
+@page :first {
+  margin-top: 4cm;
+}
+body {
+	font: 12pt "Liberation Serif", Georgia, "Times New Roman", Times, serif;
+	line-height: 1.5;
+	max-width: 50%;
+	min-width: 500px;
+	margin: 0 auto;
+	text-align: justify;
+}
+img {
+	font: 12pt "Liberation Serif", Georgia, "Times New Roman", Times, serif;
+	max-width: 100%;
+}
+p {
+	line-height: 1.5;
+}
+p:first-child {
+	text-indent: 0;
+}
+H1:first-of-type{
+	text-align: center;
+	page-break-after: avoid;
+	font-size: 3em;
+}
+H1 {
+	text-align: center;
+	page-break-after: avoid;
+	font-size: 2em;
+}
+H2 {
+	text-align: center;
+	page-break-after: avoid;
+	font-size: 1.5em;
+}
+H3 {
+	page-break-after: avoid;
+	font-size: 1em;
+}
+H4 {
+	text-align: center;
+	page-break-after: avoid;
+	font-size: 1em;
+}
+#info {
+	text-align: center;
+	display: inline;
+}

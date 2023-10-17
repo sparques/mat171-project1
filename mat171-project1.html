@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="GENERATOR" content="github.com/gomarkdown/markdown markdown processor for Go">
+  <meta charset="utf-8">
+</head>
+<body>
+
+<p><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<link rel="stylesheet" type="text/css" href="/paper.css"></p>
+
+<h1 id="an-examination-of-dietary-excess">An Examination of Dietary Excess</h1>
+
+<h4 id="matthew-hiles-et-al">Matthew Hiles, et al.</h4>
+
+<h4 id="project-1">Project #1</h4>
+
+<h4 id="emma-borynski">Emma Borynski</h4>
+
+<h4 id="mat-171-104">MAT-171-104	</h4>
+
+<h1 id="abstract">Abstract</h1>
+
+<p>In this project, we explore the gastronomical minefield that is Five Guy&rsquo;s menu. Charting the heretofore uncharted, we reveal the calorically dense panoply that is Five Guy&rsquo;s one-stop-shop for cardiologists&rsquo; express disapproval. A cursory google says there&rsquo;s about 9 calories in a gram of fat; given there are carbohydrates and proteins in all of the examined menu items, accounting for the difference, this coincides with our findings.</p>
+
+<hr>
+
+<h1 id="chart">Chart</h1>
+
+<p><img src="chart.svg" alt="" /></p>
+
+<h1 id="data-tables">Data Tables</h1>
+
+<h2 id="bunned">Bunned</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Total Fat (grams)</th>
+<th>Total Calories</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Hamburger</td>
+<td>43</td>
+<td>700</td>
+</tr>
+
+<tr>
+<td>Cheeseburger</td>
+<td>55</td>
+<td>840</td>
+</tr>
+
+<tr>
+<td>Bacon Burger</td>
+<td>50</td>
+<td>780</td>
+</tr>
+
+<tr>
+<td>Bacon Cheeseburger</td>
+<td>62</td>
+<td>920</td>
+</tr>
+
+<tr>
+<td>Little Hamburger</td>
+<td>26</td>
+<td>480</td>
+</tr>
+
+<tr>
+<td>Little Cheeseburger</td>
+<td>32</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>Little Bacon Burger</td>
+<td>33</td>
+<td>560</td>
+</tr>
+
+<tr>
+<td>Little Bacon Cheese Burger</td>
+<td>39</td>
+<td>630</td>
+</tr>
+
+<tr>
+<td>Hot Dog</td>
+<td>35</td>
+<td>545</td>
+</tr>
+
+<tr>
+<td>Cheese Dog</td>
+<td>41</td>
+<td>615</td>
+</tr>
+
+<tr>
+<td>Bacon Dog</td>
+<td>42</td>
+<td>625</td>
+</tr>
+
+<tr>
+<td>Bacon Cheese Dog</td>
+<td>48</td>
+<td>695</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="bunless">Bunless</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Total Fat (grams)</th>
+<th>Total Calories</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Hamburger</td>
+<td>34</td>
+<td>440</td>
+</tr>
+
+<tr>
+<td>Cheeseburger</td>
+<td>46</td>
+<td>580</td>
+</tr>
+
+<tr>
+<td>Bacon Burger</td>
+<td>41</td>
+<td>520</td>
+</tr>
+
+<tr>
+<td>Bacon Cheeseburger</td>
+<td>53</td>
+<td>660</td>
+</tr>
+
+<tr>
+<td>Little Hamburger</td>
+<td>17</td>
+<td>220</td>
+</tr>
+
+<tr>
+<td>Little Cheeseburger</td>
+<td>23</td>
+<td>290</td>
+</tr>
+
+<tr>
+<td>Little Bacon Burger</td>
+<td>24</td>
+<td>300</td>
+</tr>
+
+<tr>
+<td>Little Bacon Cheese Burger</td>
+<td>30</td>
+<td>370</td>
+</tr>
+
+<tr>
+<td>Hot Dog</td>
+<td>26</td>
+<td>285</td>
+</tr>
+
+<tr>
+<td>Cheese Dog</td>
+<td>32</td>
+<td>355</td>
+</tr>
+
+<tr>
+<td>Bacon Dog</td>
+<td>33</td>
+<td>365</td>
+</tr>
+
+<tr>
+<td>Bacon Cheese Dog</td>
+<td>39</td>
+<td>435</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="best-fit-for-bunned">Best Fit for Bunned</h1>
+
+<p>Performing a linear regression of the Bunned data set gives a best-fit line:</p>
+<p><span class="math display">\[ y = 12.50x + 134.73 \]</span></p><p><span class="math inline">\( R = 0.963 \)</span>, indicating a very good fit with positive correlation.</p>
+
+<h1 id="best-fit-for-bunless">Best Fit for Bunless</h1>
+
+<p>Performing a linear regression of the bunless data set gives a best-fit line:</p>
+<p><span class="math display">\[ y = 12.50x - 12.80 \]</span></p><p><span class="math inline">\( R = 0.981 \)</span>, indicating a very good fit with positive correlation.</p>
+
+<h1 id="significance-of-slope">Significance of Slope</h1>
+
+<p>In both bun and bunless, the slope is <span class="math inline">\(\approx 12.50\)</span>, meaning a gram of fat is about 12.50 calories.</p>
+
+<p>The slope has a unit of <span class="math inline">\( \frac{Calories}{Grams\ of\ Fat} \)</span>.</p>
+
+<h1 id="interpolating-data">Interpolating Data</h1>
+
+<h2 id="40-grams-of-fat-in-a-bunned-sandwich">40 Grams of Fat in a Bunned Sandwich</h2>
+
+<p>If a bunned hot dog or burger were to have 40 grams of fat, we could expect it to have about 635 calories.</p>
+
+<p>Best Fit for Bunned:</p>
+<p><span class="math display">\[ y = 12.50x + 134.73 \]</span></p><p>Fill in 40 grams of fat:</p>
+<p><span class="math display">\[ y = 12.50 \times (40) + 134.73 \]</span></p><p>Solving:</p>
+<p><span class="math display">\[ y \approx 635 \]</span></p>
+<h2 id="30-grams-of-fat-in-a-bunless-sandwich">30 Grams of Fat in a Bunless Sandwich</h2>
+
+<p>If a bunless hot dog or burger were to have 30 grams of fat, we could expect it to have about 362 calories.</p>
+
+<p>Best fit for Bunless:</p>
+<p><span class="math display">\[ y = 12.50x - 12.80 \]</span></p><p>Fill in 30 grams of fat:</p>
+<p><span class="math display">\[ y = 12.50 \times (30) - 12.80 \]</span></p><p>Solving:</p>
+<p><span class="math display">\[ y \approx 362 \]</span></p>
+<h1 id="conclusion">Conclusion</h1>
+
+<p>There is a strongly linear, positive correlation between fat content and calories.</p>
+
+<p>Additionally, buns add calories and fat. We can estimate a bun adds roughly 148 calories per sandwich.</p>
+
+<p>I should eat at FiveGuys less.</p>
+
+<h1 id="notes-on-software-used">Notes on Software Used</h1>
+
+<p>Plots and data analyses were done using LabPlot 2.10.0, free, open-source, and cross-platform Data Visualization and Analysis software.</p>
+
+<p>This document was composed in Markdown, rendered to HTML using a small program utilizing the gomarkdown<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup> package. Math formulae are composed in MathJax, compiled to MathML. Page layout and styling was manually done with hand-written CSS.</p>
+
+<p>The final rendering was done with the Google Chrome web browser.</p>
+
+<div class="footnotes">
+
+<hr>
+
+<ol>
+<li id="fn:1"><a href="https://github.com/gomarkdown/markdown">https://github.com/gomarkdown/markdown</a></li>
+</ol>
+
+</div>
+
+</body>
+</html>
